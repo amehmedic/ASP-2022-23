@@ -1,0 +1,1033 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9prim2",
+        "os": "Linux 5.13.0-39-generic x86_64\nUbuntu 20.04.4 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[memcheck]": "valgrind-3.15.0",
+        "profile[sgcheck]": "valgrind-3.15.0"
+    },
+    "status": 4,
+    "test_results": {
+        "1288": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘Lista’ was not declared in this scope\n  213 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:213:7: error: expected primary-expression before ‘int’\n  213 | Lista<int>* l;\n      |       ^~~\nmain.cpp:214:1: error: ‘l’ was not declared in this scope\n  214 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:214:9: error: ‘DvostrukaLista’ does not name a type\n  214 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:214:24: error: expected primary-expression before ‘int’\n  214 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:222:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  222 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1289": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:215:1: error: ‘Lista’ was not declared in this scope\n  215 | Lista<std::string>* l;\n      | ^~~~~\nmain.cpp:215:18: error: expected primary-expression before ‘>’ token\n  215 | Lista<std::string>* l;\n      |                  ^\nmain.cpp:215:21: error: ‘l’ was not declared in this scope\n  215 | Lista<std::string>* l;\n      |                     ^\nmain.cpp:216:9: error: ‘DvostrukaLista’ does not name a type\n  216 | l = new DvostrukaLista<std::string>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:216:35: error: expected primary-expression before ‘>’ token\n  216 | l = new DvostrukaLista<std::string>;\n      |                                   ^\nmain.cpp:216:36: error: expected primary-expression before ‘;’ token\n  216 | l = new DvostrukaLista<std::string>;\n      |                                    ^\nmain.cpp:220:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  220 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<std::string>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "18",
+                            "message": "expected primary-expression before '>' token",
+                            "code": "Lista<std::string>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "21",
+                            "message": "'l' was not declared in this scope",
+                            "code": "Lista<std::string>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<std::string>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "35",
+                            "message": "expected primary-expression before '>' token",
+                            "code": "l = new DvostrukaLista<std::string>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "36",
+                            "message": "expected primary-expression before ';' token",
+                            "code": "l = new DvostrukaLista<std::string>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1290": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘Lista’ was not declared in this scope\n  213 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:213:7: error: expected primary-expression before ‘int’\n  213 | Lista<int>* l;\n      |       ^~~\nmain.cpp:214:1: error: ‘l’ was not declared in this scope\n  214 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:214:9: error: ‘DvostrukaLista’ does not name a type\n  214 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:214:24: error: expected primary-expression before ‘int’\n  214 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:223:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  223 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 14,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1291": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘Lista’ was not declared in this scope\n  213 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:213:7: error: expected primary-expression before ‘int’\n  213 | Lista<int>* l;\n      |       ^~~\nmain.cpp:214:1: error: ‘l’ was not declared in this scope\n  214 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:214:9: error: ‘DvostrukaLista’ does not name a type\n  214 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:214:24: error: expected primary-expression before ‘int’\n  214 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:219:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  219 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1292": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> lista;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> lista;\n      |                ^~~\nmain.cpp:215:2: error: ‘lista’ was not declared in this scope\n  215 |  lista.dodajIspred(i);\n      |  ^~~~~\nmain.cpp:216:14: error: ‘lista’ was not declared in this scope\n  216 | std::cout << lista.brojElemenata() << \" \";\n      |              ^~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "2",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "lista.dodajIspred(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "14",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "std::cout << lista.brojElemenata() << \" \";"
+                        }
+                    ]
+                }
+            }
+        },
+        "1293": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> lista;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> lista;\n      |                ^~~\nmain.cpp:215:2: error: ‘lista’ was not declared in this scope\n  215 |  lista.dodajIza(i);\n      |  ^~~~~\nmain.cpp:216:14: error: ‘lista’ was not declared in this scope\n  216 | std::cout << lista.brojElemenata() << \" \";\n      |              ^~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "2",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "lista.dodajIza(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "14",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "std::cout << lista.brojElemenata() << \" \";"
+                        }
+                    ]
+                }
+            }
+        },
+        "1294": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> lista;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> lista;\n      |                ^~~\nmain.cpp:215:2: error: ‘lista’ was not declared in this scope\n  215 |  lista.dodajIspred(i);\n      |  ^~~~~\nmain.cpp:218:20: error: expected primary-expression before ‘int’\n  218 |     DvostrukaLista<int> lista2(lista);\n      |                    ^~~\nmain.cpp:219:20: error: expected primary-expression before ‘int’\n  219 |     DvostrukaLista<int> lista3;\n      |                    ^~~\nmain.cpp:221:6: error: ‘lista3’ was not declared in this scope\n  221 |     (lista3=lista).brojElemenata();\n      |      ^~~~~~\nmain.cpp:221:13: error: ‘lista’ was not declared in this scope\n  221 |     (lista3=lista).brojElemenata();\n      |             ^~~~~\nmain.cpp:226:18: error: ‘lista2’ was not declared in this scope\n  226 |     std::cout << lista2.brojElemenata() << \" \" << lista2[2];\n      |                  ^~~~~~\nmain.cpp:229:14: error: ‘lista’ was not declared in this scope\n  229 | std::cout << lista.brojElemenata() << \" \" << lista[2];\n      |              ^~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "2",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "lista.dodajIspred(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "20",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> lista2(lista);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "20",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> lista3;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "6",
+                            "message": "'lista3' was not declared in this scope",
+                            "code": "(lista3=lista).brojElemenata();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "13",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "(lista3=lista).brojElemenata();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 17,
+                            "col": "18",
+                            "message": "'lista2' was not declared in this scope",
+                            "code": "std::cout << lista2.brojElemenata() << \" \" << lista2[2];"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 20,
+                            "col": "14",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "std::cout << lista.brojElemenata() << \" \" << lista[2];"
+                        }
+                    ]
+                }
+            }
+        },
+        "1295": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> n;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> n;\n      |                ^~~\nmain.cpp:215:2: error: ‘n’ was not declared in this scope\n  215 |  n.dodajIza(i);\n      |  ^\nmain.cpp:218:1: error: ‘n’ was not declared in this scope\n  218 | n.pocetak();\n      | ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> n;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> n;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "2",
+                            "message": "'n' was not declared in this scope",
+                            "code": "n.dodajIza(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "1",
+                            "message": "'n' was not declared in this scope",
+                            "code": "n.pocetak();"
+                        }
+                    ]
+                }
+            }
+        },
+        "1296": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> lista;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> lista;\n      |                ^~~\nmain.cpp:215:2: error: ‘lista’ was not declared in this scope\n  215 |  lista.dodajIspred(i);\n      |  ^~~~~\nmain.cpp:216:7: error: ‘DvostrukaLista’ does not name a type\n  216 | const DvostrukaLista<int>& konst(lista);\n      |       ^~~~~~~~~~~~~~\nmain.cpp:217:14: error: ‘konst’ was not declared in this scope\n  217 | std::cout << konst.brojElemenata() << \" \" << konst.trenutni();\n      |              ^~~~~\nmain.cpp:219:1: error: ‘lista’ was not declared in this scope\n  219 | lista.trenutni() = 15;\n      | ^~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> lista;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "2",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "lista.dodajIspred(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "7",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "const DvostrukaLista<int>& konst(lista);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "14",
+                            "message": "'konst' was not declared in this scope",
+                            "code": "std::cout << konst.brojElemenata() << \" \" << konst.trenutni();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "1",
+                            "message": "'lista' was not declared in this scope",
+                            "code": "lista.trenutni() = 15;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1297": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:214:1: error: ‘Lista’ was not declared in this scope\n  214 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:214:7: error: expected primary-expression before ‘int’\n  214 | Lista<int>* l;\n      |       ^~~\nmain.cpp:215:1: error: ‘l’ was not declared in this scope\n  215 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:215:9: error: ‘DvostrukaLista’ does not name a type\n  215 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:215:24: error: expected primary-expression before ‘int’\n  215 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:222:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  222 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1298": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:214:1: error: ‘Lista’ was not declared in this scope\n  214 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:214:7: error: expected primary-expression before ‘int’\n  214 | Lista<int>* l;\n      |       ^~~\nmain.cpp:215:1: error: ‘l’ was not declared in this scope\n  215 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:215:9: error: ‘DvostrukaLista’ does not name a type\n  215 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:215:24: error: expected primary-expression before ‘int’\n  215 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:222:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  222 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1299": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘Lista’ was not declared in this scope\n  213 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:213:7: error: expected primary-expression before ‘int’\n  213 | Lista<int>* l;\n      |       ^~~\nmain.cpp:214:1: error: ‘l’ was not declared in this scope\n  214 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:214:9: error: ‘DvostrukaLista’ does not name a type\n  214 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:214:24: error: expected primary-expression before ‘int’\n  214 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:217:13: error: ‘dajMaksimum’ was not declared in this scope\n  217 | std::cout <<dajMaksimum(*l);\n      |             ^~~~~~~~~~~\nmain.cpp:218:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  218 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "13",
+                            "message": "'dajMaksimum' was not declared in this scope",
+                            "code": "std::cout <<dajMaksimum(*l);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1300": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘Lista’ was not declared in this scope\n  213 | Lista<int>* l;\n      | ^~~~~\nmain.cpp:213:7: error: expected primary-expression before ‘int’\n  213 | Lista<int>* l;\n      |       ^~~\nmain.cpp:214:1: error: ‘l’ was not declared in this scope\n  214 | l = new DvostrukaLista<int>;\n      | ^\nmain.cpp:214:9: error: ‘DvostrukaLista’ does not name a type\n  214 | l = new DvostrukaLista<int>;\n      |         ^~~~~~~~~~~~~~\nmain.cpp:214:24: error: expected primary-expression before ‘int’\n  214 | l = new DvostrukaLista<int>;\n      |                        ^~~\nmain.cpp:217:13: error: ‘dajMaksimum’ was not declared in this scope\n  217 | std::cout <<dajMaksimum(*l);\n      |             ^~~~~~~~~~~\nmain.cpp:218:8: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n  218 | delete l;\n      |        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'Lista' was not declared in this scope",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "7",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Lista<int>* l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "9",
+                            "message": "'DvostrukaLista' does not name a type",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "24",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "l = new DvostrukaLista<int>;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "13",
+                            "message": "'dajMaksimum' was not declared in this scope",
+                            "code": "std::cout <<dajMaksimum(*l);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "8",
+                            "message": "type '<type error>' argument given to 'delete', expected pointer",
+                            "code": "delete l;"
+                        }
+                    ]
+                }
+            }
+        },
+        "1301": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> l;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> l;\n      |                ^~~\nmain.cpp:215:5: error: ‘l’ was not declared in this scope\n  215 |     l.dodajIspred(i);\n      |     ^\nmain.cpp:216:25: error: ‘l’ was not declared in this scope\n  216 | std::cout <<dajMaksimum(l);\n      |                         ^\nmain.cpp:216:13: error: ‘dajMaksimum’ was not declared in this scope\n  216 | std::cout <<dajMaksimum(l);\n      |             ^~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "5",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l.dodajIspred(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "25",
+                            "message": "'l' was not declared in this scope",
+                            "code": "std::cout <<dajMaksimum(l);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "13",
+                            "message": "'dajMaksimum' was not declared in this scope",
+                            "code": "std::cout <<dajMaksimum(l);"
+                        }
+                    ]
+                }
+            }
+        },
+        "1302": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> l;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> l;\n      |                ^~~\nmain.cpp:215:5: error: ‘l’ was not declared in this scope\n  215 |     l.dodajIza(i);\n      |     ^\nmain.cpp:218:1: error: ‘l’ was not declared in this scope\n  218 | l.pocetak();\n      | ^\nmain.cpp:222:13: error: ‘dajMaksimum’ was not declared in this scope\n  222 | std::cout <<dajMaksimum(l)<<\" \";\n      |             ^~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "5",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l.dodajIza(i);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "1",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l.pocetak();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "13",
+                            "message": "'dajMaksimum' was not declared in this scope",
+                            "code": "std::cout <<dajMaksimum(l)<<\" \";"
+                        }
+                    ]
+                }
+            }
+        },
+        "1303": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:213:1: error: ‘DvostrukaLista’ was not declared in this scope\n  213 | DvostrukaLista<int> l;\n      | ^~~~~~~~~~~~~~\nmain.cpp:213:16: error: expected primary-expression before ‘int’\n  213 | DvostrukaLista<int> l;\n      |                ^~~\nmain.cpp:214:5: error: ‘l’ was not declared in this scope\n  214 |     l.dodajIspred(1);\n      |     ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "1",
+                            "message": "'DvostrukaLista' was not declared in this scope",
+                            "code": "DvostrukaLista<int> l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "16",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "DvostrukaLista<int> l;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "5",
+                            "message": "'l' was not declared in this scope",
+                            "code": "l.dodajIspred(1);"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1668873639
+}
